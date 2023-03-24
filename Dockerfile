@@ -7,15 +7,16 @@ ENV USER user
 
 RUN apt update
 RUN apt upgrade -y
-RUN apt install -y openssh-server sudo nano python3 python3-pip git
+RUN apt install -y openssh-server sudo nano python3 python3-pip git nodejs 
 RUN mkdir /var/run/sshd
 
 
-RUN useradd -m -s /bin/bash $USER
+RUN adduser --quiet --disabled-password --shell /bin/bash --home /home/$USER --gecos "User"  $USER
 RUN echo $USER:$USER | chpasswd
+RUN usermod -aG sudo $USER
 
 RUN mkdir -p /home/$USER/.ssh
-RUN echo $AUTHORIZED_KEY > /home/$USER/.ssh/authorized_keys
+RUN touch /home/$USER/.ssh/authorized_keys
 RUN chown -R $USER:$USER /home/$USER/.ssh
 RUN chmod 700 /home/$USER/.ssh
 RUN chmod 600 /home/$USER/.ssh/authorized_keys
