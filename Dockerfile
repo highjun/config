@@ -8,6 +8,11 @@ ENV USER user
 RUN apt update
 RUN apt upgrade -y
 RUN apt install -y openssh-server sudo nano python3 python3-pip git nodejs 
+
+RUN npm install -g n
+RUN n latest
+RUN npm install -g npm@latest
+
 RUN mkdir /var/run/sshd
 
 
