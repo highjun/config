@@ -7,7 +7,8 @@ ENV USER user
 
 RUN apt update
 RUN apt upgrade -y
-RUN apt install -y openssh-server sudo nano python3 python3-pip git nodejs 
+RUN apt install -y openssh-server sudo nano python3 python3-pip git nodejs
+RUN apt install -y npm
 
 RUN npm install -g n
 RUN n latest
@@ -25,6 +26,7 @@ RUN touch /home/$USER/.ssh/authorized_keys
 RUN chown -R $USER:$USER /home/$USER/.ssh
 RUN chmod 700 /home/$USER/.ssh
 RUN chmod 600 /home/$USER/.ssh/authorized_keys
+RUN chown -R $USER $(npm config get prefix)/lib/node_modules
 
 RUN sed -i 's/#PubkeyAuthentication yes/PubkeyAuthentication yes/g' /etc/ssh/sshd_config
 
