@@ -1,6 +1,7 @@
-# Result of code --list-extensions >> vs_code_extensions_list.txt
+# Result of code --list-extensions >> extensions.txt
 clinyong.vscode-css-modules
 mechatroner.rainbow-csv
+ms-azuretools.vscode-docker
 MS-CEINTL.vscode-language-pack-ko
 ms-python.python
 ms-python.vscode-pylance
