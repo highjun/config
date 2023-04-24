@@ -1,3 +1,4 @@
+# highjun10170/ubuntu-ssh:1.0.0
 FROM ubuntu:latest
 
 ENV TZ=Asial/Seoul

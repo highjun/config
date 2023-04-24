@@ -1,0 +1,19 @@
+# Result of code --list-extensions >> vs_code_extensions_list.txt
+clinyong.vscode-css-modules
+mechatroner.rainbow-csv
+MS-CEINTL.vscode-language-pack-ko
+ms-python.python
+ms-python.vscode-pylance
+ms-toolsai.jupyter
+ms-toolsai.jupyter-keymap
+ms-toolsai.jupyter-renderers
+ms-toolsai.vscode-jupyter-cell-tags
+ms-toolsai.vscode-jupyter-slideshow
+ms-vscode.cmake-tools
+ms-vscode.cpptools
+ms-vscode.cpptools-extension-pack
+ms-vscode.cpptools-themes
+ms-vscode.vscode-serial-monitor
+ritwickdey.LiveServer
+twxs.cmake
+vsciot-vscode.vscode-arduino
